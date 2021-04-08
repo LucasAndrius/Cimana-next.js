@@ -29,7 +29,7 @@ export default function MovieItem({info}) {
 
 //context recebe o valor da pasta [id]
 export async function getServerSideProps(context) {
-  const res = await fetch(`http://localhost:3000/api/movie/${context.params.id}`);
+  const res = await fetch(`https://cimana-next-js.vercel.app/api/movie/${context.params.id}`);
   const json = await res.json();
 
   console.log("JSON", json);
