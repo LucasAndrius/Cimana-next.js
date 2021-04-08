@@ -12,7 +12,7 @@ export default function Home({list}) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Filmes em Destaque
+          Busca
         </h1>
         <Link href="/busca">Ir para a Busca</Link>
         <ul>
@@ -29,14 +29,4 @@ export default function Home({list}) {
       </main>
     </div>
   )
-}
-
-export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/trending');
-  const json = await res.json();
-  return{
-    props:{
-      list:json.list
-    }
-  };
 }
